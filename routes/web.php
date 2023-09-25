@@ -22,5 +22,9 @@ Route::get('/about', function () {
     return 'About Us';
 });
 
+Route::get('/contact-us', function () {
+    return 'Contact Us';
+});
+
 // php namespace resolver
 //

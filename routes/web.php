@@ -1,6 +1,9 @@
 <?php
 
+use App\Http\Controllers\ExportDataController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MainController;
+use App\Http\Controllers\PaymentController;
 
 // Route::method('url', 'action');
 
@@ -85,21 +88,45 @@ use Illuminate\Support\Facades\Route;
 // ::
 
 
-Route::get('/', function() {
-    // $url = url('/about-us');
-    $url = route('aboutpage');
+// Route::get('/', function() {
+//     // $url = url('/about-us');
+//     $url = route('aboutpage');
 
-    return "<a href='$url'>About Us</a>";
-});
+//     return "<a href='$url'>About Us</a>";
+// });
 
 // DRY => Don't Repeat Yourself
 
-Route::get('/about-new', function() {
-    return "About Us Page";
-})->name('aboutpage');
+// Route::get('/about-new', function() {
+//     return "About Us Page";
+// })->name('aboutpage');
 
 // require 'admin.php';
 
+// index, about, services, courses, blog, contact
+// Route::get('/', [MainController::class, 'index'])->name('main.index');
+// Route::get('/about', [MainController::class, 'about_data'])->name('main.aboutpage');
+// Route::get('/services', [MainController::class, 'services'])->name('main.services');
+// Route::get('/courses/{id?}', [MainController::class, 'courses'])->name('main.courses');
+// Route::get('/blog', [MainController::class, 'blog'])->name('main.blog');
+// Route::get('/contact', [MainController::class, 'contact'])->name('main.contact');
+
+// Route::get('orders', [PaymentController::class, 'orders'])->name('payment.orders');
+// Route::get('checkout', [PaymentController::class, 'checkout'])->name('payment.checkout');
+// Route::get('export', ExportDataController::class)->name('payment.export');
+
+// 1. empty => without any method
+// 2. invocable => has only one invoke method
+// 3. resource => index, create, store, show, edit, updated, destroy
+// 4. api resource => index, store, show, updated, destroy
+// 5. singleton
+
+
+// CRUD Application
+// C => Create -> INSERT
+// R => Read -> SELECT
+// U => Update -> UPDATE
+// D => Delete -> DELETE
 //
 
 

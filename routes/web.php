@@ -1,9 +1,10 @@
 <?php
 
-use App\Http\Controllers\ExportDataController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\PersonalController;
+use App\Http\Controllers\ExportDataController;
 
 // Route::method('url', 'action');
 
@@ -130,3 +131,12 @@ use App\Http\Controllers\PaymentController;
 //
 
 
+Route::prefix('personal')->controller(PersonalController::class)->name('personal.')->group(function() {
+    Route::get('/', 'index')->name('index');
+    Route::get('/resume', 'resume')->name('resume');
+    Route::get('/projects', 'projects')->name('projects');
+    Route::get('/contact', 'contact')->name('contact');
+});
+
+
+//

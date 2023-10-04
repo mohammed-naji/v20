@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>@yield('title')</title>
+        <title>@yield('title', 'Testttttttttttt')</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Custom Google font-->
@@ -16,8 +16,20 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="{{ asset('personalasset/css/styles.css') }}" rel="stylesheet" />
+        <style>
+            .navbar-nav .show > .nav-link, .navbar-nav .nav-link.active {
+                color: #f00
+            }
+        </style>
         @yield('css')
     </head>
+    {{-- if(condition) {
+        true
+    }else {
+        flase
+    }
+    (condition) ? true : false; --}}
+    {{-- {{ request()->url() }} == {{ route('personal.index') }} --}}
     <body class="d-flex flex-column h-100">
         <main class="flex-shrink-0">
             <!-- Navigation-->
@@ -27,10 +39,19 @@
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="navbar-nav ms-auto mb-2 mb-lg-0 small fw-bolder">
-                            <li class="nav-item"><a class="nav-link" href="{{ route('personal.index') }}">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('personal.resume') }}">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('personal.projects') }}">Projects</a></li>
-                            <li class="nav-item"><a class="nav-link" href="{{ route('personal.contact') }}">Contact</a></li>
+                            <li class="nav-item"><a class="nav-link
+{{-- {{ request()->url() == route('personal.index') ? 'active' : '' }} --}}
+{{ request()->routeIs('personal.index') ? 'active' : '' }}
+                                " href="{{ route('personal.index') }}">Home</a></li>
+                            <li class="nav-item"><a class="nav-link
+{{ request()->url() == route('personal.resume') ? 'active' : '' }}
+                                " href="{{ route('personal.resume') }}">Resume</a></li>
+                            <li class="nav-item"><a class="nav-link
+{{ request()->url() == route('personal.projects') ? 'active' : '' }}
+                                " href="{{ route('personal.projects') }}">Projects</a></li>
+                            <li class="nav-item"><a class="nav-link
+{{ request()->url() == route('personal.contact') ? 'active' : '' }}
+                                " href="{{ route('personal.contact') }}">Contact</a></li>
                         </ul>
                     </div>
                 </div>

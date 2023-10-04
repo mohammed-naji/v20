@@ -1,5 +1,15 @@
 @extends('personal.master')
 
+@section('title', 'Resume Page')
+
+@section('css')
+<style>
+    p {
+        color: red
+    }
+</style>
+@stop
+
 @section('content')
             <!-- Page Content-->
             <div class="container px-5 my-5">
@@ -31,7 +41,7 @@
                                                 <div class="small text-muted">Los Angeles, CA</div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
+                                        <div class="col-lg-8"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -47,7 +57,7 @@
                                                 <div class="small text-muted">Gotham City, NY</div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
+                                        <div class="col-lg-8"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -72,7 +82,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
+                                        <div class="col-lg-8"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</p></div>
                                     </div>
                                 </div>
                             </div>
@@ -93,7 +103,7 @@
                                                 </div>
                                             </div>
                                         </div>
-                                        <div class="col-lg-8"><div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</div></div>
+                                        <div class="col-lg-8"><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus laudantium, voluptatem quis repellendus eaque sit animi illo ipsam amet officiis corporis sed aliquam non voluptate corrupti excepturi maxime porro fuga.</p></div>
                                     </div>
                                 </div>
                             </div>

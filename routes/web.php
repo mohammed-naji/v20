@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BlogController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MainController;
 use App\Http\Controllers\PaymentController;
@@ -138,5 +139,12 @@ Route::prefix('personal')->controller(PersonalController::class)->name('personal
     Route::get('/contact', 'contact')->name('contact');
 });
 
+
+Route::prefix('blog')->name('blog.')->group(function() {
+    Route::get('/', [BlogController::class, 'index'])->name('index');
+    Route::get('/about', [BlogController::class, 'about'])->name('about');
+    Route::get('/contact', [BlogController::class, 'contact'])->name('contact');
+    Route::get('/post', [BlogController::class, 'post'])->name('post');
+});
 
 //

@@ -1,5 +1,7 @@
 @extends('personal.master')
 
+@section('title', 'Project Page')
+
 @section('content')
             <!-- Projects Section-->
             <section class="py-5">
